@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Picture carousel </title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ol,li{
+			list-style: none;
+		}
+		#box{
+			width: 194px;
+			height: 70px;
+			border:3px solid gray;
+			margin: 100px 500px;
+			padding: 1px;
+			position:absolute;
+			overflow: hidden;
+		}
+		#scrollbox{
+			height: 70px;
+			width: 816px;
+			position:relative;			
+		}
+		#box ul li{
+			padding-right: 10px;
+			float: right;
+			position: relative;
+		}
+		#box ol {
+			position: absolute;
+			right: 2px;
+			bottom: 1px;
+		}
+		#box ol li {
+			float: left;
+			width: 10px;
+			height: 16px;
+			background: white;
+			opacity: 0.75;
+			margin: 3px;
+			text-align: center;
+			line-height: 20px;
+			cursor: pointer;
+			border:1px solid #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div  id="box">
+		<div id="scrollbox">
+			<ul id="cona">
+				<li><img src="../work5/photos/京东图１.jpg"></li>
+				<li><img src="../work5/photos/京东图２.jpg"></li>
+				<li><img src="../work5/photos/photo3.jpg"></li>
+				<li><img src="../work5/photos/京东图4.jpg"></li>
+			</ul>
+		</div>
+		<ol id="current">
+			<li >1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		var eventUtil={
+                                      //添加句柄
+                                      addHandler: function(element, type, handler){
+                                      	if(element.addEventListener){
+                                      		element.addEventListener(type, handler, false);
+                                      	}else if(element.attachEvent){
+                                      		element.attachEvent("on" + type, handler);
+                                      	}else{
+                                      		element["on"+type] = handler;
+                                      	}
+                                       },  //要加一个逗号表示区分，否则要报错Unexpected identifier
+                                      //删除句柄
+                                      removeHandler: function(element, type, handler){
+                                      	if(element.removeEventListener){
+                                      		element.removeEventListener(type, handler, false);
+                                      	}else if(element.detachEvent){
+                                      		element.detachEvent("on" + type, handler);
+                                      	}else{
+                                      		element["on"+type] = null;
+                                      	}
+                                      }
+                                  }
+
+                                  window.onload = function(){
+                                  	if ( ! document.getElementById('scrollbox'))   return false;
+                                  	var scrollbox = document.getElementById('scrollbox');
+                                  	var cona = document.getElementById('cona');
+                                  	var current = document.getElementById('current');
+                                  	var cLi = current.getElementsByTagName('li')
+                                  	var myScroll;
+                                  	var timer = 2000;
+                                  	var cut;
+                                  	var speed = 205;
+
+
+                                  	function pictureCarousel(){
+                                  		clearInterval(myScroll);
+                                  		cut = parseInt(scrollbox.style.left);
+                                  		if(cut < -418){
+                                  			scrollbox.style.left = 204 + 'px';
+                                  		}
+                                  		scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+                                  		myScroll = setInterval(pictureCarousel, 2000);
+                                  	}
+
+
+                                  	function chooseNmuber(item){
+                                  		scrollbox.style.left = 0 - item*204 +'px';
+                                  		setTimeout(pictureCarousel,3500);
+
+                                  	}
+
+
+                                  	for (var i = 0; i < cLi.length ; i++) {
+                                  		cLi[i].onclick=function(num){
+                                  			return function(){
+                                  				clearInterval(myScroll);
+                                  				chooseNmuber(num);
+                                  			}
+                                  		}(i);
+                                  	}
+
+                                  	setTimeout(pictureCarousel,2000);
+                                  }               
+                              </script>
+                          </body>
+                          </html>
