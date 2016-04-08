@@ -73,6 +73,8 @@
 		var cLi = current.getElementsByTagName('li')
 		var myScroll;
 		var scroll;
+		var  scrollBack;
+		var setTime;
 		var photoWidth = 204;
 		var timer = 3000;
 		var cut;
@@ -85,7 +87,7 @@
 			scroll = setInterval(function(){
 				if(cut <= -612){
 					scrollbox.style.left = photoWidth + 40 + 'px';
-					var scrollBack = setInterval(function(){
+					 scrollBack = setInterval(function(){
 						scrollbox.style.left = scrollbox.offsetLeft + speed + 'px';                              			
 						cut = parseInt(scrollbox.style.left);
 						speed = (-cut) / 5;
@@ -98,8 +100,8 @@
 							clearInterval(scrollBack);
 							clearInterval(scroll);
 						}
-					}, 30);
-				}       
+					}, 30); 
+				}    
 
 				scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
 				cut = parseInt(scrollbox.style.left);
@@ -118,14 +120,21 @@
 					}
 				}
 			} ,30);
-                                      myScroll = setInterval(pictureCarousel, timer);
+                                       myScroll = setInterval(pictureCarousel, timer);
                           }
 
 
                         function chooseNmuber(item){
+                        	clearTimeout(setTime);
+                        	clearInterval(scroll);
+                        	clearInterval(myScroll);
+                        	clearInterval(scrollBack);
                         	scrollbox.style.left = 0 - item * photoWidth +'px';
-                        	setTimeout(pictureCarousel,3500);
-
+                        	cut = parseInt(scrollbox.style.left);
+                        	flag = -cut % photoWidth;
+		speed =  (photoWidth -flag)/2;
+		speed=speed > 0 ? Math.ceil(speed):Math.floor(speed);
+                        	setTime = setTimeout(pictureCarousel,3500);
                         }
 
 
@@ -133,22 +142,24 @@
                       	cLi[i].onclick = function(num){
                       		return function(){
                       			clearInterval(myScroll);
+                      			clearInterval(scroll);
                       			chooseNmuber(num);
                       		}
                       	}(i);
                       }
 
-                   setTimeout(pictureCarousel,2000);        
-/*function pictureCarousel(){	
-	clearInterval(myScroll);
-	if(cut < -418){
+                   setTimeout(pictureCarousel,2000);  
+
+                   /*function pictureCarousel(){
+	        clearInterval(myScroll);
+	        if(cut < -418){
 		scrollbox.style.left = 204 + 'px';
-	}                                 			
-	scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
-	cut = parseInt(scrollbox.style.left);
-	console.log(cut);
-	myScroll = setInterval(pictureCarousel, 200);
-}*/  
+	        }                                 			
+	        scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+	       cut = parseInt(scrollbox.style.left);
+	       console.log(cut);
+	       myScroll = setInterval(pictureCarousel, 200);
+                    }*/  
 </script>
 </body>
 </html>
