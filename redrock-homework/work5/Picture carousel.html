@@ -67,70 +67,88 @@
 		</ol>
 	</div>
 	<script type="text/javascript">
-		var eventUtil={
-                                      //添加句柄
-                                      addHandler: function(element, type, handler){
-                                      	if(element.addEventListener){
-                                      		element.addEventListener(type, handler, false);
-                                      	}else if(element.attachEvent){
-                                      		element.attachEvent("on" + type, handler);
-                                      	}else{
-                                      		element["on"+type] = handler;
-                                      	}
-                                       },  //要加一个逗号表示区分，否则要报错Unexpected identifier
-                                      //删除句柄
-                                      removeHandler: function(element, type, handler){
-                                      	if(element.removeEventListener){
-                                      		element.removeEventListener(type, handler, false);
-                                      	}else if(element.detachEvent){
-                                      		element.detachEvent("on" + type, handler);
-                                      	}else{
-                                      		element["on"+type] = null;
-                                      	}
-                                      }
-                                  }
+		var scrollbox = document.getElementById('scrollbox');
+		var cona = document.getElementById('cona');
+		var current = document.getElementById('current');
+		var cLi = current.getElementsByTagName('li')
+		var myScroll;
+		var scroll;
+		var photoWidth = 204;
+		var timer = 3000;
+		var cut;
+		var flag;
+		var speed = 0;
 
-                                  window.onload = function(){
-                                  	if ( ! document.getElementById('scrollbox'))   return false;
-                                  	var scrollbox = document.getElementById('scrollbox');
-                                  	var cona = document.getElementById('cona');
-                                  	var current = document.getElementById('current');
-                                  	var cLi = current.getElementsByTagName('li')
-                                  	var myScroll;
-                                  	var timer = 2000;
-                                  	var cut;
-                                  	var speed = 205;
+		function pictureCarousel(){	
+			clearInterval(myScroll);
+
+			scroll = setInterval(function(){
+				if(cut <= -612){
+					scrollbox.style.left = photoWidth + 40 + 'px';
+					var scrollBack = setInterval(function(){
+						scrollbox.style.left = scrollbox.offsetLeft + speed + 'px';                              			
+						cut = parseInt(scrollbox.style.left);
+						speed = (-cut) / 5;
+						speed = speed > 0 ? Math.ceil(speed):Math.floor(speed);
+						if (speed == 1) {
+							speed = 2;
+						}
+						if (cut == 1 || cut > 1) {
+							scrollbox.style.left = 0+ 'px'; 
+							clearInterval(scrollBack);
+							clearInterval(scroll);
+						}
+					}, 30);
+				}       
+
+				scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+				cut = parseInt(scrollbox.style.left);
+				flag = -cut % photoWidth;
+				speed =  (photoWidth -flag)/2;
+				speed=speed > 0 ? Math.ceil(speed):Math.floor(speed);
+				if (speed == 1) {
+					speed = 2;
+				}
+				console.log("scrollbox.offsetLeft:" + scrollbox.offsetLeft);
+				console.log("cut:" + cut);
+				console.log("speed:" + speed);
+				for (var i =  0; i <= cLi.length - 1; i++) {
+					if (cut == -i * photoWidth ) {
+						clearInterval(scroll);
+					}
+				}
+			} ,30);
+                                      myScroll = setInterval(pictureCarousel, timer);
+                          }
 
 
-                                  	function pictureCarousel(){
-                                  		clearInterval(myScroll);
-                                  		cut = parseInt(scrollbox.style.left);
-                                  		if(cut < -418){
-                                  			scrollbox.style.left = 204 + 'px';
-                                  		}
-                                  		scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
-                                  		myScroll = setInterval(pictureCarousel, 2000);
-                                  	}
+                        function chooseNmuber(item){
+                        	scrollbox.style.left = 0 - item * photoWidth +'px';
+                        	setTimeout(pictureCarousel,3500);
+
+                        }
 
 
-                                  	function chooseNmuber(item){
-                                  		scrollbox.style.left = 0 - item*204 +'px';
-                                  		setTimeout(pictureCarousel,3500);
+                      for (var i = 0; i < cLi.length ; i++) {
+                      	cLi[i].onclick = function(num){
+                      		return function(){
+                      			clearInterval(myScroll);
+                      			chooseNmuber(num);
+                      		}
+                      	}(i);
+                      }
 
-                                  	}
-
-
-                                  	for (var i = 0; i < cLi.length ; i++) {
-                                  		cLi[i].onclick=function(num){
-                                  			return function(){
-                                  				clearInterval(myScroll);
-                                  				chooseNmuber(num);
-                                  			}
-                                  		}(i);
-                                  	}
-
-                                  	setTimeout(pictureCarousel,2000);
-                                  }               
-                              </script>
-                          </body>
-                          </html>
+                   setTimeout(pictureCarousel,2000);        
+/*function pictureCarousel(){	
+	clearInterval(myScroll);
+	if(cut < -418){
+		scrollbox.style.left = 204 + 'px';
+	}                                 			
+	scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+	cut = parseInt(scrollbox.style.left);
+	console.log(cut);
+	myScroll = setInterval(pictureCarousel, 200);
+}*/  
+</script>
+</body>
+</html>
