@@ -1,0 +1,375 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li{
+	list-style: none;
+}
+#font{
+	height: 48px;
+	line-height: 48px;
+	width: 1298px;
+}
+#font ul{
+	margin-left: 600px;
+	margin-top: -55px;
+	padding-left: 30px;
+}
+#font ul li{
+	display: inline-block;
+	margin-left: 30px;
+}
+#font ul li:hover{
+	border-bottom: 10px solid #e4393c;
+}
+#font ul li a:hover{
+	color: #e4393c;
+}
+#font img{
+	display:  inline-block;
+	margin-top: 5px;
+}
+.fontImg1{
+	margin-left: 50px;
+	margin-bottom: -5px;
+}
+.fontImg2{
+	margin-left: 20px;
+	margin-right: -10px;
+	margin-bottom: -5px;
+}
+#font span{
+	display: inline-block;
+	margin-left: 15px;
+	color: #e4393c;
+}
+#font ul span a{
+	color: #e4393c ! important;
+}
+.fontWord{
+	font-size: 25px;
+}
+.middle{
+	width: 1298px;
+	height: 988px;
+}
+
+.middleImg1{
+	width: 1250px;
+	height: 550px;
+	margin-left: 26px;
+}
+.middleImgs{
+	width: 1298px;
+	height: 60px;
+}
+.middleImgs img{
+	padding-left: 145px;
+	padding-right: 120px; 
+	margin-top: 20px;
+}
+.middleWord{
+	width: 1298px;
+	text-align: center;
+	font-size: 15px;
+	color: gray;
+	position: relative;
+}
+.middleWord ul li{
+	padding-left: 70px;
+	padding-right: 60px;
+	margin-top: 25px;
+	width: 180px;
+	position: relative;
+	float: left;
+}
+.middleWord ul li span{
+	display: inline-block;
+	width: 10px;
+	height: 50px;
+	margin-left: 240px;
+	margin-top:-50px; 
+	border-right: 1px solid gray;
+}
+#middleNext{
+	margin-top: 130px;
+	margin-left: 30px;
+	height: 760px;
+}
+#middleNext img{
+	width: 1250px;
+}
+.middleNext{
+	margin-top: -5px;
+}
+#photos{
+	width: 1250px;
+	height: 530px;
+	background-color:#f7f7f7; 
+	margin-top: -32px;
+	margin-left: 30px;
+}
+#photos img{
+	padding-top: 70px;
+	padding-left: 100px;
+	width: 200px;
+}
+#photosNext{
+	width: 1250px;
+	height: 560px;
+	margin-left: 30px;
+	position: absolute;
+}
+#photosNextLeft{
+	width: 856px;
+	position: relative;
+	float: left;
+}
+#photosNextLeft img{
+	height: 566px;
+	width: 838px;
+}
+#photosNextRight{
+	width: 380px;
+	position: relative;
+	float: left;
+}
+#photosNextRight span{
+	display: inline-block;
+	font-size: 25px;
+	margin-top: 175px;
+	margin-left: 145px;
+}
+#photosNextRight p{
+	width: 275px;
+	margin-left: 50px;
+	margin-top: 30px;
+	font-size: 13px;
+	color:gray; 
+}
+.photosNextRightBotton{
+	width: 106px;
+	height: 35px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 680;
+	color: #e4393c;
+	border:1px solid #e4393c;
+	background-color: white;
+	margin-left: 140px;
+	margin-top: 50px;
+	outline:medium;/*outline:medium;点击即可去掉边框*/
+}
+#photosNextRight p input{
+	width: 13px;
+	height:13px; 
+	border-radius: 8px;
+	background-color: white;
+	border: 1px solid gray;
+	margin-left: 100px;
+	margin-right: -80px;
+	outline:medium;/*outline:medium;点击即可去掉边框*/
+}
+#behind{
+	width: 1250px;
+	height: 510px;/* if don't set margin it willl be in the left font*/
+	margin-left: 30px;
+	margin-top: 566px;
+	position: absolute;
+}
+#behind div{
+	height: 510px;
+	width: 416px;
+	position: relative;
+	float: left;
+}
+.behindLeft{
+	background-color: #e4393c;
+}
+#behind div p{
+	width: 416px;
+	height: 55px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 160px;
+}
+#behind div span{
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	margin-left: 190px;
+}
+.behindLeft span{
+	border-bottom: 2px solid white;
+}
+.behindLeft p{
+	color: white;
+}
+#behind div input{
+	width: 106px;
+	height: 35px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 680;
+	color: #e4393c;
+	border:1px solid #e4393c;
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 20px;
+	outline:medium;/*outline:medium;点击即可去掉边框*/	
+}
+.behindMiddle span{
+	border-bottom: 2px solid black;
+}
+.behindRight img{
+	width: 418px;
+	height: 510px;
+} 
+#message{
+	height: 750px;
+	width: 1250px;
+	margin-left: 30px;
+	margin-top: 1076px;
+}
+.messageTop p{
+	height: 35px;
+	width: 1250px;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 120px;
+}
+.messageTop span{
+	display: inline-block;
+	width: 35px;
+	height: 2px;
+	margin-left: 610px;
+	border-bottom: 3px solid #e4393c;
+}
+.messageTop2{
+	width: 420px !important;
+	font-size: 10px !important;
+	color:gray  !important;
+	margin-left: 420px;
+	padding-top: 8px !important;
+
+}
+.messageLeft{
+	width: 280px;
+	height: 275px;
+	margin-left: 100px;
+	margin-top: 70px;
+}
+.messageLeft h4{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 500;
+	padding-top: 30px;
+
+}
+.messageLeft span{
+	display: inline-block;
+	font-size: 6px;
+	color: gray;
+	padding-top: 30px;
+}
+.messageLeft  p {
+	margin-left: 225px;
+	height: 10px;
+	line-height: 10px;
+	color: gray;
+	font-size: 6px;
+	padding-top: 20px;
+}
+.messageLeft  p a{
+	color: gray;
+}
+.messageRight  {
+	margin-left: 520px;
+	margin-top: -250px;
+	width: 640px;
+	height: 275px;
+}
+.messageRight textarea{
+	background-color: #DDDDDD;
+	outline:none;/*outline:medium;即可去掉点击边框*/
+}
+.peopleMessage{
+	display: inline-block;
+	resize:none;/*textarea缩放属性会在右下方有几条横线*/
+	height: 40px;
+	line-height: 40px;
+	width: 270px;
+	margin-left: 20px;
+	padding-left: 20px;
+	margin-top: 30px;
+	background-color: #DDDDDD;
+	border: 1px solid white;
+}
+.peopleDreamMessage{
+	display: inline-block;
+	resize:none;/*textarea缩放属性会在右下方有几条横线*/
+	height: 110px;
+	width: 588px;
+	margin-left: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-top: 20px;
+	background-color: #DDDDDD;
+	border: 1px solid white;
+}
+.messageRight input{
+	background-color: #DDDDDD;
+	width: 612px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 20px;
+	padding-left: 20px;
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	border: 1px solid white;
+	outline:medium;/*outline:medium;点击即可去掉边框*/
+}
+#last{
+	width: 1250px;
+	height: 415px;
+	margin-left: 30px;
+}
+#last img{
+	display: block;
+	width: 1250px;
+	position:absolute;
+	z-index: -1;/*当你定义的CSS中有position属性值为absolute、relative或fixed时，用z-index此取值方可生效。此属性参数值越大，则该标签被层叠在最上面。*/
+}
+
+#last textarea{
+	width: 510px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 6px;
+	color: #6d6f76;
+	background-color: white;
+	margin-left: 350px;
+	margin-top: 180px;
+	resize:none;
+	z-index: 2;
+	outline:none;/*outline:medium;即可去掉点击边框*/
+	position: absolute;/*不设置会导致下面的input元素不能使用margin和 padding*/
+}
+#last input{
+	width: 80px;
+	height: 42px;
+	margin-top: 180px;
+	margin-left: 860px;
+	background-color: #6d6f76;
+	border: 1px solid #6d6f76;
+	color:white;
+	text-align: center;
+	font-size: 16px;
+	outline:medium;/*outline:medium;即可去掉点击边框*/
+}
