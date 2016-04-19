@@ -48,12 +48,19 @@
 			border:1px solid #aaa;
 		}
 	</style>
+<<<<<<< HEAD
 	<script type="text/javascript"  src="Picture carousel.js"></script>
+=======
+>>>>>>> 088f2d79435a1527df20fa4b6ac7db20ce28ad72
 </head>
 <body>
 	<div  id="box">
 		<div id="scrollbox">
+<<<<<<< HEAD
 			<ul >
+=======
+			<ul id="cona">
+>>>>>>> 088f2d79435a1527df20fa4b6ac7db20ce28ad72
 				<li><img src="../work5/photos/京东图１.jpg"></li>
 				<li><img src="../work5/photos/京东图２.jpg"></li>
 				<li><img src="../work5/photos/photo3.jpg"></li>
@@ -69,6 +76,7 @@
 	</div>
 	<script type="text/javascript">
 		var scrollbox = document.getElementById('scrollbox');
+<<<<<<< HEAD
 		var current = document.getElementById('current');
 		var cLi = current.getElementsByTagName('li');
 
@@ -87,5 +95,100 @@
 		}, 2000);
 
 	</script>
+=======
+		var cona = document.getElementById('cona');
+		var current = document.getElementById('current');
+		var cLi = current.getElementsByTagName('li')
+		var myScroll;
+		var scroll;
+		var  scrollBack;
+		var setTime;
+		var photoWidth = 204;
+		var timer = 3000;
+		var cut;
+		var flag;
+		var speed = 0;
+
+		function pictureCarousel(){	
+			clearInterval(myScroll);
+
+			scroll = setInterval(function(){
+				if(cut <= -612){
+					scrollbox.style.left = photoWidth + 40 + 'px';
+					 scrollBack = setInterval(function(){
+						scrollbox.style.left = scrollbox.offsetLeft + speed + 'px';                              			
+						cut = parseInt(scrollbox.style.left);
+						speed = (-cut) / 5;
+						speed = speed > 0 ? Math.ceil(speed):Math.floor(speed);
+						if (speed == 1) {
+							speed = 2;
+						}
+						if (cut == 1 || cut > 1) {
+							scrollbox.style.left = 0+ 'px'; 
+							clearInterval(scrollBack);
+							clearInterval(scroll);
+						}
+					}, 30); 
+				}    
+
+				scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+				cut = parseInt(scrollbox.style.left);
+				flag = -cut % photoWidth;
+				speed =  (photoWidth -flag)/2;
+				speed=speed > 0 ? Math.ceil(speed):Math.floor(speed);
+				if (speed == 1) {
+					speed = 2;
+				}
+				console.log("scrollbox.offsetLeft:" + scrollbox.offsetLeft);
+				console.log("cut:" + cut);
+				console.log("speed:" + speed);
+				for (var i =  0; i <= cLi.length - 1; i++) {
+					if (cut == -i * photoWidth ) {
+						clearInterval(scroll);
+					}
+				}
+			} ,30);
+                                       myScroll = setInterval(pictureCarousel, timer);
+                          }
+
+
+                        function chooseNmuber(item){
+                        	clearTimeout(setTime);
+                        	clearInterval(scroll);
+                        	clearInterval(myScroll);
+                        	clearInterval(scrollBack);
+                        	scrollbox.style.left = 0 - item * photoWidth +'px';
+                        	cut = parseInt(scrollbox.style.left);
+                        	flag = -cut % photoWidth;
+		speed =  (photoWidth -flag)/2;
+		speed=speed > 0 ? Math.ceil(speed):Math.floor(speed);
+                        	setTime = setTimeout(pictureCarousel,3500);
+                        }
+
+
+                      for (var i = 0; i < cLi.length ; i++) {
+                      	cLi[i].onclick = function(num){
+                      		return function(){
+                      			clearInterval(myScroll);
+                      			clearInterval(scroll);
+                      			chooseNmuber(num);
+                      		}
+                      	}(i);
+                      }
+
+                   setTimeout(pictureCarousel,2000);  
+
+                   /*function pictureCarousel(){
+	        clearInterval(myScroll);
+	        if(cut < -418){
+		scrollbox.style.left = 204 + 'px';
+	        }                                 			
+	        scrollbox.style.left = scrollbox.offsetLeft - speed + 'px';
+	       cut = parseInt(scrollbox.style.left);
+	       console.log(cut);
+	       myScroll = setInterval(pictureCarousel, 200);
+                    }*/  
+</script>
+>>>>>>> 088f2d79435a1527df20fa4b6ac7db20ce28ad72
 </body>
 </html>
