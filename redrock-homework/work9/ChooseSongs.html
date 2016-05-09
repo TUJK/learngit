@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#font{
+			width: 720px;
+			height: 56px;
+			margin: 0 auto;
+		}
+		#container{
+			width: 720px;
+			height: 765px;
+			margin: 0 auto;
+		}
+		#left{
+			width: 112px;
+			height: 930px;
+			background-color: #282d30;
+			position: relative;
+			float: left;
+		}
+		#left ul {
+			padding-top: 20px;
+		}
+		#left ul li{
+			list-style: none;
+			width: 109px;
+			height: 42px;
+			line-height: 42px;
+			font-size: 15px;
+			font-weight: bold;
+			color: white;
+			display: inline-block;
+		}
+		#left ul li:hover{
+			border-right: 3px solid #d54d46;
+			background-color: #1d2125;
+		}
+		#left ul li img{
+			padding-top: 10px;
+			padding-left: 6px;
+		}
+		#left ul li p{
+			display: block;
+			margin-top: -45px;
+			margin-left: 27px;
+		}
+		#right{
+			width: 608px;
+			height: 765px;
+			position: relative;
+			float: right;
+
+		}
+		.title{
+			font-size: 18px;
+			font-weight: 600;
+			padding-top: 35px;
+			padding-left: 35px;
+		}
+		.addphoto{
+			margin-left: 105px;
+		}
+		.messages{
+			margin-left: 30px;
+			font-size: 15px;
+			margin-bottom: 25px;
+		}
+		.messages input{
+			display: inline-block;
+			margin-left: 6px;
+			height: 19px;
+			color: #666666;
+			border: 1px solid #e8e8e8;
+
+		}
+		.messagesphoto{
+			display: block;
+			margin-left: 196px;
+			margin-top: -23px;
+		}
+		#nowShowLeft{
+			width: 300px;
+			color: #666666;
+			position: relative;
+			float: left;
+		}
+		#nowShowLeft span{
+			display: block;
+			font-size: 12px;
+			height: 15px;
+			color: #c6c6c6;
+			margin-left: 30px;
+			margin-top: -10px;
+		}
+		.addSongs{
+			margin-left: 175px;
+			margin-top: 22px;
+		}
+		#nowShowRight{
+			width: 300px;
+			position: relative;
+			float: right;
+			color: #666666;
+		}
+		#songsMessages{
+			width: 265px;
+			height: 107px;
+			border: 1px solid  #e8e8e8;
+			margin-left: 30px;
+			margin-bottom: 20px;
+		}
+		#nowShowRight span{
+			display: block;
+			font-size: 12px;
+			height: 15px;
+			color: #c6c6c6;
+			padding-left: 10px;
+			padding-top: -5px;
+		}
+		.nowmessages{
+			padding-left: 10px;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 12px;
+		}
+		.messagesphoto1{
+			display: block;
+			margin-left: 202px;
+			margin-top: -20px;
+		}
+		.nowmessages input{
+			display: inline-block;
+			padding-left: 6px;
+			height: 21px;
+			color: #747474;
+			border: 1px solid #e8e8e8;
+		}
+		.add{
+			margin-left: 26px;
+		}
+		.behind{
+			width: 608px;
+			position: relative;
+			float: left;
+		}
+		.behind span{
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 600;
+			padding-left: 34px;
+			padding-top: 72px;
+			padding-bottom: 15px;
+		}
+		.behind ul{
+			list-style: none;
+			width: 608px;
+			height: 38px;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.behTitle{
+			background-color: #e8e8e8;
+		}
+		.behind ul li{
+			position: relative;
+			float: left;
+			width: 113px;
+			height: 38px;
+			line-height: 38px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.behind li:first-child{
+			padding-left: 35px;
+			text-align: left;
+		} 
+		.behtitle li{
+			font-weight: 600;
+			font-size: 14px !important;
+		}
+		.behind p{
+			width: 608px;
+			height: 32px;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.behind li img{
+			/*	padding-top: 3px;*/
+			text-align: center;
+			padding-left: 25px;
+		}
+		.behSongs li{
+			width: 185px !important;
+		}
+		.bottom{
+			position: relative;
+			float: left;
+			width: 608px;
+		}
+		.bottom ul {
+			list-style: none;
+			padding-left: 200px;
+			padding-top: 30px;
+		}
+		.bottom ul li{
+			position: relative;
+			float: left;
+			width: 25px !important;
+			background-color: white;
+			padding-right: 20px;
+		}
+		.bottom ul li input{
+			width: 25px;/*25px实际上为29px*/
+			height: 25px;
+			-moz-border-radius: 50%; 
+			-webkit-border-radius: 50%; 
+			border-radius: 50%;  
+			background-color: white; 
+			text-align: center; 
+			border:2px solid gray;      
+		}
+		.bottom ul li{
+			cursor: pointer;
+		}
+		.bottom ul li input:hover{
+			cursor: pointer;
+			color: white;
+			background-color: #d54d46;
+			border:2px solid #d54d46;   
+		}
+	</style>
+</head>
+<body>
+	<div id="font">
+		<img src="../work9/ChooseSongs_font.gif">
+	</div>
+
+	<div id="container">
+
+		<div id="left">
+			<ul>
+				<li><img src="../work9/ChooseSongs_1.gif"><p>歌曲管理</p></li>
+				<li><img src="../work9/ChooseSongs_2.gif"><p>公告管理</p></li>
+				<li><img src="../work9/ChooseSongs_3.gif"><p>数据分析</p></li>
+				<li><img src="../work9/ChooseSongs_4.gif"><p>节目上传</p></li>
+				<li><img src="../work9/ChooseSongs_5.gif"><p>违规设置</p></li>
+			</ul>
+		</div>
+
+		<div id="right">
+
+			<div id="nowShowLeft">
+				<p class="title">整期节目</p>
+				<img  class="addphoto" src="../work9/ChooseSongs_add.gif">
+				<p class="messages">节目名称 <input type="text" value="樱花季"></input></p>
+				<p class="messages">主播信息 <input type="text" value="洛必达法"></input></p>
+				<p class="messages">播出时间 <input type="text" value="2016-01-02"></input></p>
+				<p class="messages">整期节目 <input type="text" value="相依为命-陈.."><img class="messagesphoto" src="../work9/ChooseSongs_dec1.gif"></input></p>
+				<span>文件大小 : 23.4M</span>
+				<img class="addSongs" src="../work9/ChooseSongs_addPhotos.gif">
+			</div>
+
+			<div id="nowShowRight">
+				<p class="title">包含歌曲</p>
+				<div id="songsMessages">
+					<p class="nowmessages">选择歌曲 <input type="text" value="相依为命-陈小春" style="width:123px;"><img class="messagesphoto" src="../work9/ChooseSongs_dec1.gif"></input></p>
+					<span>文件大小 : 23.4M</span>
+					<p class="nowmessages">选择最近点播 <input type="text" style="width:120px;"><img class="messagesphoto1" src="../work9/ChooseSongs_dec2.gif"></input></p>
+				</div>
+				<div id="songsMessages">
+					<p class="nowmessages">选择歌曲 <input type="text" value="相依为命-陈小春" style="width:123px;"><img class="messagesphoto" src="../work9/ChooseSongs_dec1.gif"></input></p>
+					<span>文件大小 : 23.4M</span>
+					<p class="nowmessages">选择最近点播 <input type="text" style="width:120px;"><img class="messagesphoto1" src="../work9/ChooseSongs_dec2.gif"></input></p>
+				</div>
+				<img class="add" src="../work9/ChooseSongs_add2.gif">
+			</div>
+			<div class="behind">
+				<span>往期节目</span>
+				<ul class="behTitle">
+					<li>节目名称</li>
+					<li>主播信息</li>
+					<li>播出时间</li>
+					<li>文件大小</li>
+					<li>所含歌曲</li>
+				</ul>
+				<ul>
+					<li>新学期迎新</li>
+					<li>小二黑</li>
+					<li>2016-02-01</li>
+					<li>22.2M</li>
+					<li><img src="../work9/ChooseSongs_dec3.gif"></li>
+				</ul>
+				<ul>
+					<li>运动会</li>
+					<li>大三白</li>
+					<li>2015-11-12</li>
+					<li>33.3M</li>
+					<li><img src="../work9/ChooseSongs_dec3.gif"></li>
+				</ul>
+				<ul>
+					<li>新学期迎新</li>
+					<li>小二黑</li>
+					<li>2016-02-01</li>
+					<li>22.2M</li>
+					<li><img src="../work9/ChooseSongs_dec3.gif"></li>
+				</ul>
+				<ul class="behSongs">
+					<li>歌曲名：相依为命</li>
+					<li>演唱者：陈小春</li>
+					<li>文件大小：22.4M</li>
+				</ul>
+				<ul class="behSongs">
+					<li>歌曲名：富士山下</li>
+					<li>演唱者：陈奕迅</li>
+					<li>文件大小:3.4M</li>
+				</ul>
+				<ul class="behSongs">
+					<li>歌曲名：富士山下</li>
+					<li>演唱者：陈奕迅</li>
+					<li>文件大小:3.4M</li>
+				</ul>
+				<ul>
+					<li>运动会</li>
+					<li>大三白</li>
+					<li>2015-11-12</li>
+					<li>33.3M</li>
+					<li><img src="../work9/ChooseSongs_dec3.gif"></li>
+				</ul>
+				<ul>
+					<li>新学期迎新</li>
+					<li>小二黑</li>
+					<li>2016-02-01</li>
+					<li>22.2M</li>
+					<li><img src="../work9/ChooseSongs_dec3.gif"></li>
+				</ul>
+			</div>
+			<div class="bottom">
+			<ul>
+			    <li><img src="../work9/ChooseSongs_left.gif"></li>
+				<li><input type="botton" value="1"></input></li>
+				<li><input type="botton" value="2"></input></li>
+				<li><input type="botton" value="3"></input></li>
+				<li><input type="botton" value="4"></input></li>
+				<li><img src="../work9/ChooseSongs_right.gif"></li>
+			</ul>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
