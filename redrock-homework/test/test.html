@@ -4,758 +4,754 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title></title>
 	<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	li{
-		list-style: none;
-	}
-	.title{
-		height: 38px;
-		width: 1370px;
-		background-color: #363636;
-		margin: 0 auto;
-	}
-	.title ul{
-		padding-top: 10px;
-		margin: 0 auto;
-		width: 985px;
-	}
-	.title ul li{
-		position: relative;
-		float: left;
-		padding-right: 30px;
-		color: #949494;
-		font-size: 15px;
-	}
-	.title ul li:first-child{
-		color: white;
-	}
-	.title ul li:last-child{
-		display: inline-block;
-		margin-top: -3px;
-	}
-	.hello{
-		width: 30px;
-		font-size: 15px;
-		color: white;
-		position: relative;
-		float: left;
-		padding-left: 50px;
-		margin-top: -5px;
-	}
-	.titleSelect{
-		position: relative;
-		float: left;
-		width: 100px;
-		text-align: center;
-		font-size: 15px;
-		background-color: white;
-		margin-left: 10px;
-		height: 38px;
-		color: #949494;
-		vertical-align: middle;
-		margin-top: -9px;
-	}
-	.titleSelect span{
-		display: inline-block;
-		margin-top: 10px;
-		margin-left: 5px;
-		border-bottom: 5px solid white;
-		border-left: 5px solid white;
-		border-right: 5px solid white;
-		border-top: 5px solid gray;
-	}
-	.titleHidden{
-		position: absolute;
-		font-size: 15px;
-		background-color: white;
-		width: 100px;
-		padding-top: 15px;
-	}
-	.titleHidden dl{
-		padding-top: 8px;
-		padding-bottom: 8px;
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.title{
+			height: 38px;
+			width: 1370px;
+			background-color: #363636;
+			margin: 0 auto;
+		}
+		.title ul{
+			padding-top: 10px;
+			margin: 0 auto;
+			width: 985px;
+		}
+		.title ul li{
+			position: relative;
+			float: left;
+			padding-right: 30px;
+			color: #949494;
+			font-size: 15px;
+		}
+		.title ul li:first-child{
+			color: white;
+		}
+		.title ul li:last-child{
+			display: inline-block;
+			margin-top: -3px;
+		}
+		.hello{
+			width: 30px;
+			font-size: 15px;
+			color: white;
+			vertical-align: top;
+			padding-left: 50px;
+		}
+		.titleSelect{
+			display: inline-block;
+			width: 350px;
+			height: 27px;
+			margin-left: 10px;
+		}
+		.titleSelect li{
+			position: relative;
+			float: left;
+			width: 100px;
+			text-align: center;
+			font-size: 15px;
+			background-color: white;
+			margin-left: 10px;
+			vertical-align: top;
+			margin-top: -8px;
+			height: 38px;
+			color: #949494;	
+		}
+		.titleSelect span{
+			display: inline-block;
+			margin-top: 10px;
+			margin-left: 5px;
+			border-bottom: 5px solid white;
+			border-left: 5px solid white;
+			border-right: 5px solid white;
+			border-top: 5px solid gray;
+		}
+		.titleHidden{
+			position: absolute;
+			font-size: 15px;
+			background-color: white;
+			width: 100px;
+			padding-top: 15px;
+			display: none;
+		}
+		.titleHidden dl{
+			padding-top: 8px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #949494;
+		}
+		.titleHidden dl:first-child{
+			border-top: 1px solid #949494;
+		}
+		.titleSelect li:hover{
+			cursor: pointer;
+		}
+		.titleSelect li:hover dt{
+			display: block;
+		}
+		.weather{
+			width: 1100px;
+			height: 100px;
+			margin: 0 auto;
+			background-image: url("../test/portal1.gif");
+			background-repeat: no-repeat;
+			background-position: 15px 15px;
+		}
+		.titleChoose{
+			width: 1100px;
+			height: 40px;
+			margin: 0 auto;
+		}
+		.titleChoose div{
+			padding-top: 5px;
+			display: inline-block;
+			width: 360px;
+			height: 40px;
+			border-right: 1px dotted #949494;
+		}
+		.titleChoose div ul{
+			width: 360px;
+			height: 20px;
+		}
+		.titleChoose div ul li{
+			position: relative;
+			float: left;
+			color: black;
+			font-size: 13px;
+			width: 80px;
+			padding-left: 10px;
+		}
+		.photos, .seed{
+			width: 1100px;
+			height: 420px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.everyTitle {
+			width: 750px;
+			border-bottom: 1px solid #949494;
+			color: #e75c41;
+			margin-bottom: 10px;
+		}
+		.everyTitle span{
+			border-bottom: 3px solid #e75c41;
+		}
+		.photosLeft{
+			width: 733px;
+			height: 300px;
+			margin-top: 20px;
+			position: relative;
+			float: left;
+			margin-left: 10px;
+		}
+		.photosLeft img{
+			display: inline-block;
+		}
+		.photos2{
+			vertical-align: top;
+			display: inline-block;
+		}
+		.photo3{
+			vertical-align: top;
+			padding-left: 291px;
+			margin-top: -181px;
+		}
+		.photos ul{
+			display: inline-block;
+			position: relative;
+			float: right;
+			width: 150px;
+			height: 360px;
+			margin-top: -356px;
+		}
+		.photos ul li{
+			display: inline-block;
+			margin-top: -3px;
+		}
+		.photosRight{
+			width: 250px;
+			margin-top: 20px;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+		}
+		.everyTitleR{
+			border-bottom: 1px solid #949494;
+			color: #e75c41;
+			margin-bottom: 10px;
+			width: 240px;
+		}
+		.photosRTitle{
+			border-bottom: 3px solid #e75c41;
+		}
+		.photosRMore{
+			font-size: 12px;
+			padding-left: 120px;
+			color: #949494;
+		}
+		.photosRight ul{
+			width: 250px;
+			padding-top: 358px;
+		}
+		.photosRight ul li, .madeRight ul li{
+			width: 250px;
+			height: 120px;
+		}
+		.photosRight ul li p, .madeRight ul li p{
+			display: inline-block;
+			width: 120px;
+			height: 89px;
+			vertical-align: top;
+			padding-left: 10px;
+		}
+		.photosRight ul li p span, .madeRight ul li p span{
+			display: inline-block;
+			font-size: 12px;
+			padding-top: 10px;
+			line-height: 20px;
+		}
+		.talking{
+			width: 1100px;
+			height: 220px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.talkingLeft{
+			width: 733px;
+			height: 300px;
+			margin-top: 20px;
+			position: relative;
+			float: left;
+			margin-left: 10px;
+		}
+		.talking h4{
+			font-weight: bold;
+		}
+		.talking h4 span{
+			display: inline-block;
+			border-bottom: 5px solid gray;
+			border-left: 5px solid gray;
+			border-right: 5px solid gray;
+			border-top: 5px solid gray;
+			margin-right: 10px;
+		}
+		.talkingLeft ul{
+			width: 733px;
+		}
+		.talking ul li span, .seedRight ul li span{
+			display: inline-block;
+			border-bottom: 5px solid gray;
+			border-left: 5px solid gray;
+			border-right: 5px solid gray;
+			border-top: 5px solid gray;
+			margin-right: 10px;
+		}
+		.talkingLeft ul li{
+			position: relative;
+			float: left;
+			font-size: 13px;
+			padding-right: 10px;
+			padding-top: 10px;
+		}
+		.talkingRight{
+			width: 250px;
+			margin-top: 20px;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+		}
+		.talkingRight ul li，.seedRight ul li{
+			position: relative;
+			float: left;
+		}
+		.talkingRight ul li{
+			font-size: 14px;
+			padding-top: 10px;
+		}
+		.made, .work, .meeting{
+			width: 1100px;
+			height: 420px;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		.madeLeft{
+			width: 733px;
+			height: 300px;
+			margin-top: -60px;
+			position: relative;
+			float: left;
+			margin-left: 10px;
+		}
+		.madeLeftL{
+			width: 582px;
+			position: relative;
+			float: left;
+		}
+		.madeLeft ul li{
+			position: relative;
+			float: left;
+		}
+		.madeLeftR{
+			width: 150px;
+			height: 30px;
+			position: relative;
+			float: left;
+		}
+		.madeRight{
+			width: 250px;
+			margin-top: -60px;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+		}
+		.seedLeftPhotos li{
+			position: relative;
+			float: left;
+			width: 244px;
+		}
+		.seedLeftPhotos li img{
+			display: inline-block;
+			position: relative;
+			float: left;
+			padding-right: 5px;
+		}
+		.seedLeftPhotos li p{
+			display: inline-block;
+			position: relative;
+			float: left;
+			line-height: 30px;
+			font-size: 12px;
+			color: #999999;
+		}
+		.seedLeftPhotos li  span{
+			display: inline-block;
+			position: absolute;
+			width: 70px;
+			height: 30px;
+			font-size: 12px;
+			line-height: 15px !important;
+			padding-top: 8px;
+			color: black;
+		}
+		.seedLeft{
+			width: 733px;
+			height: 320px;
+			position: relative;
+			float: left;
+		}
+		.seedLeftContext{
+			width: 420px;
+			position: relative;
+			float: left;
 
-		border-bottom: 1px solid #949494;
-	}
-	.titleHidden dl:first-child{
-		border-top: 1px solid #949494;
-	}
-	.weather{
-		width: 1100px;
-		height: 100px;
-		margin: 0 auto;
-		background-image: url("../test/portal1.gif");
-		background-repeat: no-repeat;
-		background-position: 15px 15px;
-	}
-	.titleChoose{
-		width: 1100px;
-		height: 40px;
-		margin: 0 auto;
-	}
-	.titleChoose div{
-		padding-top: 5px;
-		display: inline-block;
-		width: 360px;
-		height: 40px;
-		border-right: 1px dotted #949494;
-	}
-	.titleChoose div ul{
-		width: 360px;
-		height: 20px;
-	}
-	.titleChoose div ul li{
-		position: relative;
-		float: left;
-		color: black;
-		font-size: 13px;
-		width: 80px;
-		padding-left: 10px;
-	}
-	.photos, .seed{
-		width: 1100px;
-		height: 420px;
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-	.everyTitle {
-		width: 750px;
-		border-bottom: 1px solid #949494;
-		color: #e75c41;
-		margin-bottom: 10px;
-	}
-	.everyTitle span{
-		border-bottom: 3px solid #e75c41;
-	}
-	.photosLeft{
-		width: 733px;
-		height: 300px;
-		margin-top: 20px;
-		position: relative;
-		float: left;
-		margin-left: 10px;
-	}
-	.photosLeft img{
-		display: inline-block;
-	}
-	.photos2{
-		vertical-align: top;
-		display: inline-block;
-	}
-	.photo3{
-		vertical-align: top;
-		padding-left: 291px;
-		margin-top: -181px;
-	}
-	.photos ul{
-		display: inline-block;
-		position: relative;
-		float: right;
-		width: 150px;
-		height: 360px;
-		margin-top: -356px;
-	}
-	.photos ul li{
-		display: inline-block;
-		margin-top: -3px;
-	}
-	.photosRight{
-		width: 250px;
-		margin-top: 20px;
-		position: relative;
-		float: left;
-		margin-left: 50px;
-	}
-	.everyTitleR{
-		border-bottom: 1px solid #949494;
-		color: #e75c41;
-		margin-bottom: 10px;
-		width: 240px;
-	}
-	.photosRTitle{
-		border-bottom: 3px solid #e75c41;
-	}
-	.photosRMore{
-		font-size: 12px;
-		padding-left: 120px;
-		color: #949494;
-	}
-	.photosRight ul{
-		width: 250px;
-		padding-top: 358px;
-	}
-	.photosRight ul li, .madeRight ul li{
-		width: 250px;
-		height: 120px;
-	}
-	.photosRight ul li p, .madeRight ul li p{
-		display: inline-block;
-		width: 120px;
-		height: 89px;
-		vertical-align: top;
-		padding-left: 10px;
-	}
-	.photosRight ul li p span, .madeRight ul li p span{
-		display: inline-block;
-		font-size: 12px;
-		padding-top: 10px;
-		line-height: 20px;
-	}
-	.talking{
-		width: 1100px;
-		height: 220px;
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-	.talkingLeft{
-		width: 733px;
-		height: 300px;
-		margin-top: 20px;
-		position: relative;
-		float: left;
-		margin-left: 10px;
-	}
-	.talking h4{
-		font-weight: bold;
-	}
-	.talking h4 span{
-		display: inline-block;
-		border-bottom: 5px solid gray;
-		border-left: 5px solid gray;
-		border-right: 5px solid gray;
-		border-top: 5px solid gray;
-		margin-right: 10px;
-	}
-	.talkingLeft ul{
-		width: 733px;
-	}
-	.talking ul li span, .seedRight ul li span{
-		display: inline-block;
-		border-bottom: 5px solid gray;
-		border-left: 5px solid gray;
-		border-right: 5px solid gray;
-		border-top: 5px solid gray;
-		margin-right: 10px;
-	}
-	.talkingLeft ul li{
-		position: relative;
-		float: left;
-		font-size: 13px;
-		padding-right: 10px;
-		padding-top: 10px;
-	}
-	.talkingRight{
-		width: 250px;
-		margin-top: 20px;
-		position: relative;
-		float: left;
-		margin-left: 50px;
-	}
-	.talkingRight ul li，.seedRight ul li{
-		position: relative;
-		float: left;
-	}
-	.talkingRight ul li{
-		font-size: 14px;
-		padding-top: 10px;
-	}
-	.made, .work, .meeting{
-		width: 1100px;
-		height: 420px;
-		margin: 0 auto;
-		margin-top: 10px;
-	}
-	.madeLeft{
-		width: 733px;
-		height: 300px;
-		margin-top: -60px;
-		position: relative;
-		float: left;
-		margin-left: 10px;
-	}
-	.madeLeftL{
-		width: 582px;
-		position: relative;
-		float: left;
-	}
-	.madeLeft ul li{
-		position: relative;
-		float: left;
-	}
-	.madeLeftR{
-		width: 150px;
-		height: 30px;
-		position: relative;
-		float: left;
-	}
-	.madeRight{
-		width: 250px;
-		margin-top: -60px;
-		position: relative;
-		float: left;
-		margin-left: 50px;
-	}
-	.seedLeftPhotos li{
-		position: relative;
-		float: left;
-		width: 244px;
-	}
-	.seedLeftPhotos li img{
-		display: inline-block;
-		position: relative;
-		float: left;
-		padding-right: 5px;
-	}
-	.seedLeftPhotos li p{
-		display: inline-block;
-		position: relative;
-		float: left;
-		line-height: 30px;
-		font-size: 12px;
-		color: #999999;
-	}
-	.seedLeftPhotos li  span{
-		display: inline-block;
-		position: absolute;
-		width: 70px;
-		height: 30px;
-		font-size: 12px;
-		line-height: 15px !important;
-		padding-top: 8px;
-		color: black;
-	}
-	.seedLeft{
-		width: 733px;
-		height: 320px;
-		position: relative;
-		float: left;
-	}
-	.seedLeftContext{
-		width: 420px;
-		position: relative;
-		float: left;
+		}
+		.seedLeftContext li{
+			clear: both;
+			width: 400px !important;
+			padding-top: 10px;
+			font-size: 15px;
+			margin: 0px !important;
+		}
+		.seedLeftContext li span{
+			display: inline-block;
+			border-bottom: 5px solid gray;
+			border-left: 5px solid gray;
+			border-right: 5px solid gray;
+			border-top: 5px solid gray;
+			margin-right: 5px;
+		}
+		.seedLeftContext2{
+			display: inline-block;
+			width: 130px;
+			margin-left: 20px;
+		}
+		.seedLeftContext2 li, .seedLeftContext3 li{
+			padding-top: 10px;
+		}
+		.seedLeftContext3{
+			display: inline-block;
+			width: 130px;
+			margin-left: 25px;
+			text-align: right;
+		}
+		.seedRight, .meetingRight{
+			width: 250px;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+		}
+		.seedRight ul li{
+			font-size: 14px;
+			padding-top: 10px;
+			clear: both;
+		}
+		.seed{
+			height: 320px !important;
+		}
+		.workLeft{
+			position: relative;
+			float: left;
+		}
+		.workLeft ul li:first-child{
+			font-weight: bold;
+		}
+		.workLeft ul li{
+			font-size: 15px !important;
+		}
+		.workRight{
+			width: 250px;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+		}
+		.workRight ul li{
+			position: relative;
+			float: left;
+			padding-left: 30px;
+			font-size: 12px;
+		}
+		.workRight ul li:first-child{
+			padding-left: 0 !important;
+		}
+		.work{
+			height: 230px !important;
+		}
+		.meetingLeft{
+			width: 733px;
+			height: 300px;
+			position: relative;
+			float: left;
 
-	}
-	.seedLeftContext li{
-		clear: both;
-		width: 400px !important;
-		padding-top: 10px;
-		font-size: 15px;
-		margin: 0px !important;
-	}
-	.seedLeftContext li span{
-		display: inline-block;
-		border-bottom: 5px solid gray;
-		border-left: 5px solid gray;
-		border-right: 5px solid gray;
-		border-top: 5px solid gray;
-		margin-right: 5px;
-	}
-	.seedLeftContext2{
-		display: inline-block;
-		width: 130px;
-		margin-left: 20px;
-	}
-	.seedLeftContext2 li, .seedLeftContext3 li{
-		padding-top: 10px;
-	}
-	.seedLeftContext3{
-		display: inline-block;
-		width: 130px;
-		margin-left: 25px;
-		text-align: right;
-	}
-	.seedRight, .meetingRight{
-		width: 250px;
-		position: relative;
-		float: left;
-		margin-left: 50px;
-	}
-    .seedRight ul li{
-    	font-size: 14px;
-    	padding-top: 10px;
-		clear: both;
-    }
-    .seed{
-    	height: 320px !important;
-    }
-    .workLeft{
-    	position: relative;
-    	float: left;
-    }
-    .workLeft ul li:first-child{
-    	font-weight: bold;
-    }
-    .workLeft ul li{
-    	font-size: 15px !important;
-     }
-     .workRight{
-     	width: 250px;
-		position: relative;
-		float: left;
-		margin-left: 50px;
-     }
-     .workRight ul li{
-     	position: relative;
-     	float: left;
-     	padding-left: 30px;
-     	font-size: 12px;
-     }
-     .workRight ul li:first-child{
-     	padding-left: 0 !important;
-     }
-     .work{
-     	height: 230px !important;
-     }
-     .meetingLeft{
-     	width: 733px;
-		height: 300px;
-		position: relative;
-		float: left;
-		
-     }
-     #seedLeftContext li{
-     	width: 420px !important;
-     }
-     #seedLeftContext3{
-     	padding-top: 12px;
-     	color: #666666;
-     }
-     #seedLeftContext1{
-     	width: 210px !important;
-     }
-     .download{
-     	display: inline-block;
-     	position: relative;
-     	float: left;
-     }
-     .download li{
-     	padding-top: 10px;
-     	color: #ff8a43;
-     }
-     .button{
-     	width: 1370px;
-     	height: 263px;
-     	background-color: #333333;
-     	text-align: center;
-     	margin: 0 auto;
-     }
-     .floatChhose{
-     	position: fixed;
-     	left: 10px;
-     	width: 97px;
-     	top: 50px;
-     }
-     .titleSelect dt{
-     	display: none;
-     }
-     .titleSelect:hover{
-     	cursor: pointer;
-     }
-     .titleSelect:hover dt{
-     	display: block !important;
-     }
-     #titleSelect3:hover{
-     	color: red;
-     }
-
-
+		}
+		#seedLeftContext li{
+			width: 420px !important;
+		}
+		#seedLeftContext3{
+			padding-top: 12px;
+			color: #666666;
+		}
+		#seedLeftContext1{
+			width: 210px !important;
+		}
+		.download{
+			display: inline-block;
+			position: relative;
+			float: left;
+		}
+		.download li{
+			padding-top: 10px;
+			color: #ff8a43;
+		}
+		.button{
+			width: 1370px;
+			height: 263px;
+			background-color: #333333;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.floatChhose{
+			position: fixed;
+			left: 10px;
+			width: 97px;
+			top: 50px;
+		}
 	</style>
 </head>
 <body>
-<div class="title">
-<ul>
-	<li>设为首页</li>
-	<li>二手市场</li>
-	<li>软件中心</li>
-	<li>BTdown铺</li>
-	<li>红岩微博</li>
-	<li>...</li>
-</ul>
-<span class="hello">您好</span>
-<ol>
-<li class="titleSelect" id="titleSelect1">陈晋唯 <span></span><dt class="titleHidden"><dl>个人资料</dl><dl>退出登录</dl></dt></li>
-<li class="titleSelect" id="titleSelect2">信息查询 <span></span><dt class="titleHidden"><dl>查成绩</dl><dl>查课表</dl><dl>查空教室</dl></dt></li>
-<li class="titleSelect" id="titleSelect3">论坛 <span></span></span><dt class="titleHidden"><dl>评论</dl><dl>@我</dl></dt></li>
-
- </ol>
-<span class="hello">登出</span>
-</div>
-
-<div class="weather"></div>
-
-<div class="titleChoose">
-	<div>
-	<ul><li>图书馆</li><li style="color: red;">蓝鸽听力</li><li>心理互助</li><li>心理互助</li></ul>
-	<ul><li>网管中心</li><li>基建后勤</li><li>基建后勤</li><li>基建后勤</li></ul>		
+	<div class="title">
+		<ul>
+			<li>设为首页</li>
+			<li>二手市场</li>
+			<li>软件中心</li>
+			<li>BTdown铺</li>
+			<li>红岩微博</li>
+			<li>...</li>
+		</ul>
+		<span class="hello">您好</span>
+		<ol class="titleSelect">
+			<li id="titleSelect1">陈晋唯 <span></span><dt class="titleHidden"><dl>个人资料</dl><dl>退出登录</dl></dt></li>
+			<li id="titleSelect2">信息查询 <span></span><dt class="titleHidden"><dl>查成绩</dl><dl>查课表</dl><dl>查空教室</dl></dt></li>
+			<li>论坛 <span></span><dt class="titleHidden"><dl>评论</dl><dl>@我</dl></dt></li>
+		</ol>
+		<span class="hello">登出</span>
 	</div>
-	<div>
-	<ul><li style="color: red;">教务在线</li><li>学工管理</li><li>图书馆</li><li style="color: red;">宽带缴费</li></ul>
-	<ul><li>vod点播</li><li>香奈儿音乐</li><li>网管中心</li><li>基建后勤</li></ul>	
-	</div>
-	<div>
-	<ul><li>心理互助</li><li style="color: red;">蓝鸽听力</li><li>学工管理</li><li>网络认证</li></ul>
-	<ul><li>基建后勤</li><li>vod点播</li><li>香奈儿音乐</li><li>综合缴费</li></ul>	
-	</div>
-</div>
-
-<div class="photos">
-<div class="photosLeft">
-<h3 class="everyTitle"><span>今日热点</span></h3>
-<img src="../test/portal2.gif"><img class="photos2" src="../test/portal3.gif"><img class="photo3" src="../test/portal4.gif">
-<ul>
-	<li><img src="../test/portal5.gif"></li>
-	<li><img src="../test/portal6.gif"></li>
-	<li><img src="../test/portal7.gif"></li>
-</ul>
-</div>
-<div class="photosRight">
-	<h3 class="everyTitleR"><span class="photosRTitle">热门活动</span> <span class="photosRMore">更多</span></h3>
-	<ul>
-	<li><img src="../test/portal8.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-	<li><img src="../test/portal9.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-	<li><img src="../test/portal10.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-	</ul>
-</div>
-</div>
-
-<div class="floatChhose"> 
-<img src="../test/portal37.gif">
-<img src="../test/portal38.gif">
-<img src="../test/portal37.gif">
-<img src="../test/portal38.gif">
-<img src="../test/portal37.gif">
-</div>
-
-
-<div class="talking">
-
-<div class="talkingLeft">
-<h3 class="everyTitle"><span>校园论坛</span></h3>
-<h4><span></span>热门帖子</h4>
-<ul>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-	<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
-</ul>
-</div>
-
-<div class="talkingRight">
-	<h3 class="everyTitleR"><span class="photosRTitle">你问我答</span> <span class="photosRMore">更多</span></h3>
-	<h4><span></span>热门问题</h4>
-	<ul>
-		<li><span></span>我的netkeeper怎么连不上去...</li>
-		<li><span></span>我的netkeeper怎么连不上去...</li>
-		<li><span></span>我的netkeeper怎么连不上去...</li>
-		<li><span></span>我的netkeeper怎么连不上去...</li>
-		<li><span></span>怎么样实现打开隐藏的超链接...</li>
-		<li><span></span>怎么样实现打开隐藏的超链接...</li>
-	</ul>
-</div>
-</div>
-
-<div class="made">
-<div class="madeLeft">
-<h3 class="everyTitle"><span style="color: #4bd886;border-bottom: 3px solid #4bd886;">原创平台</span></h3>
-<ul class="madeLeftL">
-	<li><img src="../test/portal11.gif"></li>
-	<li><img src="../test/portal11.gif"></li>
-	<li><img src="../test/portal11.gif"></li>
-	<li><img src="../test/portal11.gif"></li>
-</ul>
-<ul class="madeLeftR">
-<li><img src="../test/portal12.gif"></li>
-<li><img src="../test/portal13.gif"></li>
-<li><img src="../test/portal14.gif"></li>	
-</ul>
-</div>
-<div class="madeRight">
-<h3 class="everyTitleR"><span class="photosRTitle" style="color: #4bd886;border-bottom: 3px solid #4bd886;">你问我答</span> <span class="photosRMore">更多</span></h3>
-<ul>
-	<li><img src="../test/portal15.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-	<li><img src="../test/portal16.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-	<li><img src="../test/portal17.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
-</ul>
-</div>
-</div>
-
-<div class="seed">
-<div class="seedLeft">
-<h3 class="everyTitle"><span style="color: #4bd886;border-bottom: 3px solid #4bd886;">热门种子</span></h3>
-<ul class="seedLeftPhotos">
-	<li><img src="../test/portal18.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
-	<li><img src="../test/portal19.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
-	<li><img src="../test/portal20.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
-</ul>
-<ul class="seedLeftContext">
-	<li><span></span>热血高校2 BD</li>
-	<li><span></span>热血高校1 BD</li>
-	<li><span></span>《亲爱的》2014最新电影,黄渤，赵薇，张译，</li>
-	<li><span></span>《超体》720p 内附中文字幕—-学长归来</li>
-	<li><span></span>《触不可及》孙红雷，桂纶镁。爱情谍战片，赵宝刚导演</li>
-</ul>
-<ul class="seedLeftContext2">
-	<li>中外影视</li>
-	<li>电视剧场</li>
-	<li>动漫飞闪</li>
-	<li>中外影视</li>
-	<li>综艺娱乐</li>
-</ul>
-<ul class="seedLeftContext3">
-	<li>梦里知几庚</li>
-	<li>梦里知几庚</li>
-	<li>梦里知几庚</li>
-	<li>梦里知几庚</li>
-	<li>梦里知几庚</li>
-</ul>
-</div>
-<div class="seedRight">
-<h3 class="everyTitleR"><span class="photosRTitle" style="color: #4bd886;border-bottom: 3px solid #4bd886;">比赛信息</span> <span class="photosRMore">更多</span></h3>
-<h4><span></span>热门问题</h4>
-	<ul>
-		<li><span></span>“春节娃娃”全球动漫形象创意...</li>
-		<li><span></span>为梦想设计—-魅族手机主题...</li>
-		<li><span></span>第四届全国大学生广告设计大...</li>
-		<li><span></span>第二届全国高校物联网应用创...</li>
-		<li><span></span>杉杉杯--中国微经典全国大赛...</li>
-	</ul>
 	
-</div>
-</div>
+	<div class="weather"></div>
 
-<div class="photos">
-<div class="photosLeft">
-<h3 class="everyTitle"><span style="color: #ffb400;border-bottom: 3px solid #ffb400;">二手市场</span></h3>
-<img src="../test/portal21.gif"><img class="photos2" src="../test/portal22.gif"><img class="photo3" src="../test/portal23.gif">
-<ul>
-	<li><img src="../test/portal24.gif"></li>
-	<li><img src="../test/portal25.gif"></li>
-	<li><img src="../test/portal26.gif"></li>
-</ul>
-</div>
+	<div class="titleChoose">
+		<div>
+			<ul><li>图书馆</li><li style="color: red;">蓝鸽听力</li><li>心理互助</li><li>心理互助</li></ul>
+			<ul><li>网管中心</li><li>基建后勤</li><li>基建后勤</li><li>基建后勤</li></ul>		
+		</div>
+		<div>
+			<ul><li style="color: red;">教务在线</li><li>学工管理</li><li>图书馆</li><li style="color: red;">宽带缴费</li></ul>
+			<ul><li>vod点播</li><li>香奈儿音乐</li><li>网管中心</li><li>基建后勤</li></ul>	
+		</div>
+		<div>
+			<ul><li>心理互助</li><li style="color: red;">蓝鸽听力</li><li>学工管理</li><li>网络认证</li></ul>
+			<ul><li>基建后勤</li><li>vod点播</li><li>香奈儿音乐</li><li>综合缴费</li></ul>	
+		</div>
+	</div>
 
-<div class="photosRight">
-	<h3 class="everyTitleR"><span class="photosRTitle" style="color: #ffb400;border-bottom: 3px solid #ffb400;">软件推荐</span> <span class="photosRMore">更多</span></h3>
-	<ul>
-	<li><img src="../test/portal27.gif"><p>Adobe合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
-	<li><img src="../test/portal28.gif"><p>浏览器合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
-	<li><img src="../test/portal29.gif"><p>编程软件合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
-	</ul>
-</div>
-</div>
 
-<div class="work">
-<div class="workLeft">
-<h3 class="everyTitle"><span style="color: #ffb400;border-bottom: 3px solid #ffb400;">兼职招聘</span></h3>
-<ul class="seedLeftContext" style="width: 350px;">
-	<li><span></span>招聘公司</li>
-	<li><span></span>深圳市共进电子有限公司</li>
-	<li><span></span>武汉华工正源光子技术有限公司</li>
-	<li><span></span>微软携5家公司招聘</li>
-	<li><span></span>深圳市共进电子有限公司</li>
-	<li><span></span>武汉华工正源光子技术有限公司</li>
-	<li><span></span>微软携5家公司招聘</li>
-</ul>
-<ul class="seedLeftContext2" style="width: 200px;">
-	<li>招聘时间</li>
-	<li>2014-10-21 9:00</li>
-	<li>2014-10-21 9:00</li>
-	<li>2014-10-21 9:00</li>
-	<li>2014-10-21 9:00</li>
-	<li>2014-10-21 9:00</li>
-	<li>2014-10-21 9:00</li>
-</ul>
-<ul class="seedLeftContext3">
-	<li>招聘地点</li>
-	<li>第三国际会议厅</li>
-	<li>2416教室</li>
-	<li>2100报告厅</li>
-	<li>风雨操场</li>
-	<li>2100报告厅</li>
-	<li>2100报告厅</li>
-</ul>	
-</div>
-<div class="workRight">
-<h3 class="everyTitleR"><span class="photosRTitle" style="color: #ffb400;border-bottom: 3px solid #ffb400;">App推荐</span> <span class="photosRMore">更多</span></h3>
-<ul>
-	<li><img src="../test/portal30.gif"></li>
-	<li><img src="../test/portal30.gif"></li>
-	<li><img src="../test/portal30.gif"></li>
-</ul>
-<ul>
-	<li>重邮小帮手</li>
-	<li>重邮小帮手</li>
-	<li>重邮小帮手</li>
-</ul>
-</div>
-</div>
+	<div class="photos">
+		<div class="photosLeft">
+			<h3 class="everyTitle"><span>今日热点</span></h3>
+			<img src="../test/portal2.gif"><img class="photos2" src="../test/portal3.gif"><img class="photo3" src="../test/portal4.gif">
+			<ul>
+				<li><img src="../test/portal5.gif"></li>
+				<li><img src="../test/portal6.gif"></li>
+				<li><img src="../test/portal7.gif"></li>
+			</ul>
+		</div>
+		<div class="photosRight">
+			<h3 class="everyTitleR"><span class="photosRTitle">热门活动</span> <span class="photosRMore">更多</span></h3>
+			<ul>
+				<li><img src="../test/portal8.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+				<li><img src="../test/portal9.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+				<li><img src="../test/portal10.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+			</ul>
+		</div>
+	</div>
 
-<div class="meeting">
-<div class="meetingLeft">
-<h3 class="everyTitle"><span style="color: #02b9c9;border-bottom: 3px solid #02b9c9;">讲座信息</span></h3>
-<ul class="seedLeftPhotos">
-	<li><img src="../test/portal33.gif"><h4>一把梳子何以巧夺福斯榜</h4><p>主讲人：<span>谭木匠品牌总监李平</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
-	<li><img src="../test/portal35.gif"><h4>闻唇齿间盛唐 寻复兴路方向</h4><p>主讲人：<span>谭木匠品牌总监李平</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
-	<li><img src="../test/portal34.gif"><h4>《弟子规》解读当代教育</h4><p>主讲人：<span>西南大学教授邹芙都</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
-</ul>
-<ul class="seedLeftContext" id="seedLeftContext">
-	<li>往期回顾</li>
-	<li><span></span>汉语传播国际系列讲座</li>
-	<li><span></span>”光明讲坛“走进重庆邮电大学：明代四大奇书的当代价值</li>
-	<li><span></span>闻学讲堂：历史建筑蕴含着中华文化礼仪的精华</li>
-	<li><span></span>中国传统文化与发扬系列讲座</li>
-	<li><span></span>”光明讲坛“走进重庆邮电大学：信息化带给我们的便利</li>
-	<li><span></span>”光明讲坛“走进重庆邮电大学：明代四大奇书的当代价值</li>
-	<li><span></span>闻学讲堂：历史建筑蕴含着中华文化礼仪的精华</li>
-</ul>
-<ul class="seedLeftContext3" id="seedLeftContext3">
-    <li></li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-	<li>2014年10月25日</li>
-</ul>	
-</div>
-<div class="meetingRight">
-<h3 class="everyTitleR"><span class="photosRTitle" style="color: #02b9c9;border-bottom: 3px solid #02b9c9;">学习资源</span> <span class="photosRMore">更多</span></h3>
-<ul class="seedLeftContext" id="seedLeftContext1">
-	<li><span></span>高等数学函数资料</li>
-	<li><span></span>《LED封装技术》扫描...</li>
-	<li><span></span>时间相关电位基础</li>
-	<li><span></span>高等数学函数资料</li>
-	<li><span></span>《LED封装技术》扫描...</li>
-	<li><span></span>事件相关电位基础</li>
-	<li><span></span>Java3Android--ma...</li>
-</ul>
-<ul class="download">
-	<li>下载</li>
-	<li>下载</li>
-	<li>下载</li>
-	<li>下载</li>
-	<li>下载</li>
-	<li>下载</li>
-	<li>下载</li>
-</ul>
-</div>
-</div>
+	<div class="floatChhose"> 
+		<img src="../test/portal37.gif">
+		<img src="../test/portal38.gif">
+		<img src="../test/portal37.gif">
+		<img src="../test/portal38.gif">
+		<img src="../test/portal37.gif">
+	</div>
 
-<div class="button">
-	<img src="../test/portal36.gif">
-</div>
+
+	<div class="talking">
+
+		<div class="talkingLeft">
+			<h3 class="everyTitle"><span>校园论坛</span></h3>
+			<h4><span></span>热门帖子</h4>
+			<ul>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+				<li><span></span>外语工作论坛：联合国翻译工作者的辛苦与艰酸背后...</li>
+			</ul>
+		</div>
+
+		<div class="talkingRight">
+			<h3 class="everyTitleR"><span class="photosRTitle">你问我答</span> <span class="photosRMore">更多</span></h3>
+			<h4><span></span>热门问题</h4>
+			<ul>
+				<li><span></span>我的netkeeper怎么连不上去...</li>
+				<li><span></span>我的netkeeper怎么连不上去...</li>
+				<li><span></span>我的netkeeper怎么连不上去...</li>
+				<li><span></span>我的netkeeper怎么连不上去...</li>
+				<li><span></span>怎么样实现打开隐藏的超链接...</li>
+				<li><span></span>怎么样实现打开隐藏的超链接...</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="made">
+		<div class="madeLeft">
+			<h3 class="everyTitle"><span style="color: #4bd886;border-bottom: 3px solid #4bd886;">原创平台</span></h3>
+			<ul class="madeLeftL">
+				<li><img src="../test/portal11.gif"></li>
+				<li><img src="../test/portal11.gif"></li>
+				<li><img src="../test/portal11.gif"></li>
+				<li><img src="../test/portal11.gif"></li>
+			</ul>
+			<ul class="madeLeftR">
+				<li><img src="../test/portal12.gif"></li>
+				<li><img src="../test/portal13.gif"></li>
+				<li><img src="../test/portal14.gif"></li>	
+			</ul>
+		</div>
+		<div class="madeRight">
+			<h3 class="everyTitleR"><span class="photosRTitle" style="color: #4bd886;border-bottom: 3px solid #4bd886;">你问我答</span> <span class="photosRMore">更多</span></h3>
+			<ul>
+				<li><img src="../test/portal15.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+				<li><img src="../test/portal16.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+				<li><img src="../test/portal17.gif"><p>新生笑脸<span>快来留下你大学的第一张笑脸吧...</span></p></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="seed">
+		<div class="seedLeft">
+			<h3 class="everyTitle"><span style="color: #4bd886;border-bottom: 3px solid #4bd886;">热门种子</span></h3>
+			<ul class="seedLeftPhotos">
+				<li><img src="../test/portal18.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
+				<li><img src="../test/portal19.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
+				<li><img src="../test/portal20.gif"><h4>里约大冒险2</h4><p>豆瓣评分：<span style="color: #e75c41; font-size: 20px;font-weight: bold;width: 32px;">7.5</span><br>主演：<span>安妮.海瑟薇杰西...</span><br>类型：<span>喜剧，冒险，动画</span><br>上映日期:<span>14-10-1</span></p></li>
+			</ul>
+			<ul class="seedLeftContext">
+				<li><span></span>热血高校2 BD</li>
+				<li><span></span>热血高校1 BD</li>
+				<li><span></span>《亲爱的》2014最新电影,黄渤，赵薇，张译，</li>
+				<li><span></span>《超体》720p 内附中文字幕—-学长归来</li>
+				<li><span></span>《触不可及》孙红雷，桂纶镁。爱情谍战片，赵宝刚导演</li>
+			</ul>
+			<ul class="seedLeftContext2">
+				<li>中外影视</li>
+				<li>电视剧场</li>
+				<li>动漫飞闪</li>
+				<li>中外影视</li>
+				<li>综艺娱乐</li>
+			</ul>
+			<ul class="seedLeftContext3">
+				<li>梦里知几庚</li>
+				<li>梦里知几庚</li>
+				<li>梦里知几庚</li>
+				<li>梦里知几庚</li>
+				<li>梦里知几庚</li>
+			</ul>
+		</div>
+		<div class="seedRight">
+			<h3 class="everyTitleR"><span class="photosRTitle" style="color: #4bd886;border-bottom: 3px solid #4bd886;">比赛信息</span> <span class="photosRMore">更多</span></h3>
+			<h4><span></span>热门问题</h4>
+			<ul>
+				<li><span></span>“春节娃娃”全球动漫形象创意...</li>
+				<li><span></span>为梦想设计—-魅族手机主题...</li>
+				<li><span></span>第四届全国大学生广告设计大...</li>
+				<li><span></span>第二届全国高校物联网应用创...</li>
+				<li><span></span>杉杉杯--中国微经典全国大赛...</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="photos">
+		<div class="photosLeft">
+			<h3 class="everyTitle"><span style="color: #ffb400;border-bottom: 3px solid #ffb400;">二手市场</span></h3>
+			<img src="../test/portal21.gif"><img class="photos2" src="../test/portal22.gif"><img class="photo3" src="../test/portal23.gif">
+			<ul>
+				<li><img src="../test/portal24.gif"></li>
+				<li><img src="../test/portal25.gif"></li>
+				<li><img src="../test/portal26.gif"></li>
+			</ul>
+		</div>
+
+		<div class="photosRight">
+			<h3 class="everyTitleR"><span class="photosRTitle" style="color: #ffb400;border-bottom: 3px solid #ffb400;">软件推荐</span> <span class="photosRMore">更多</span></h3>
+			<ul>
+				<li><img src="../test/portal27.gif"><p>Adobe合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
+				<li><img src="../test/portal28.gif"><p>浏览器合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
+				<li><img src="../test/portal29.gif"><p>编程软件合集<span>Adobe软件包括ID，PS，AD，AI等...</span></p></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="work">
+		<div class="workLeft">
+			<h3 class="everyTitle"><span style="color: #ffb400;border-bottom: 3px solid #ffb400;">兼职招聘</span></h3>
+			<ul class="seedLeftContext" style="width: 350px;">
+				<li><span></span>招聘公司</li>
+				<li><span></span>深圳市共进电子有限公司</li>
+				<li><span></span>武汉华工正源光子技术有限公司</li>
+				<li><span></span>微软携5家公司招聘</li>
+				<li><span></span>深圳市共进电子有限公司</li>
+				<li><span></span>武汉华工正源光子技术有限公司</li>
+				<li><span></span>微软携5家公司招聘</li>
+			</ul>
+			<ul class="seedLeftContext2" style="width: 200px;">
+				<li>招聘时间</li>
+				<li>2014-10-21 9:00</li>
+				<li>2014-10-21 9:00</li>
+				<li>2014-10-21 9:00</li>
+				<li>2014-10-21 9:00</li>
+				<li>2014-10-21 9:00</li>
+				<li>2014-10-21 9:00</li>
+			</ul>
+			<ul class="seedLeftContext3">
+				<li>招聘地点</li>
+				<li>第三国际会议厅</li>
+				<li>2416教室</li>
+				<li>2100报告厅</li>
+				<li>风雨操场</li>
+				<li>2100报告厅</li>
+				<li>2100报告厅</li>
+			</ul>	
+		</div>
+		<div class="workRight">
+			<h3 class="everyTitleR"><span class="photosRTitle" style="color: #ffb400;border-bottom: 3px solid #ffb400;">App推荐</span> <span class="photosRMore">更多</span></h3>
+			<ul>
+				<li><img src="../test/portal30.gif"></li>
+				<li><img src="../test/portal30.gif"></li>
+				<li><img src="../test/portal30.gif"></li>
+			</ul>
+			<ul>
+				<li>重邮小帮手</li>
+				<li>重邮小帮手</li>
+				<li>重邮小帮手</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="meeting">
+		<div class="meetingLeft">
+			<h3 class="everyTitle"><span style="color: #02b9c9;border-bottom: 3px solid #02b9c9;">讲座信息</span></h3>
+			<ul class="seedLeftPhotos">
+				<li><img src="../test/portal33.gif"><h4>一把梳子何以巧夺福斯榜</h4><p>主讲人：<span>谭木匠品牌总监李平</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
+				<li><img src="../test/portal35.gif"><h4>闻唇齿间盛唐 寻复兴路方向</h4><p>主讲人：<span>谭木匠品牌总监李平</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
+				<li><img src="../test/portal34.gif"><h4>《弟子规》解读当代教育</h4><p>主讲人：<span>西南大学教授邹芙都</span><br>时间:<span style="padding-left: 18px;"> 2014年12月29号</span><br>地点:   <span style="padding-left: 18px;">第三国际会议厅</span></p></li>
+			</ul>
+			<ul class="seedLeftContext" id="seedLeftContext">
+				<li>往期回顾</li>
+				<li><span></span>汉语传播国际系列讲座</li>
+				<li><span></span>”光明讲坛“走进重庆邮电大学：明代四大奇书的当代价值</li>
+				<li><span></span>闻学讲堂：历史建筑蕴含着中华文化礼仪的精华</li>
+				<li><span></span>中国传统文化与发扬系列讲座</li>
+				<li><span></span>”光明讲坛“走进重庆邮电大学：信息化带给我们的便利</li>
+				<li><span></span>”光明讲坛“走进重庆邮电大学：明代四大奇书的当代价值</li>
+				<li><span></span>闻学讲堂：历史建筑蕴含着中华文化礼仪的精华</li>
+			</ul>
+			<ul class="seedLeftContext3" id="seedLeftContext3">
+				<li></li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+				<li>2014年10月25日</li>
+			</ul>	
+		</div>
+		<div class="meetingRight">
+			<h3 class="everyTitleR"><span class="photosRTitle" style="color: #02b9c9;border-bottom: 3px solid #02b9c9;">学习资源</span> <span class="photosRMore">更多</span></h3>
+			<ul class="seedLeftContext" id="seedLeftContext1">
+				<li><span></span>高等数学函数资料</li>
+				<li><span></span>《LED封装技术》扫描...</li>
+				<li><span></span>时间相关电位基础</li>
+				<li><span></span>高等数学函数资料</li>
+				<li><span></span>《LED封装技术》扫描...</li>
+				<li><span></span>事件相关电位基础</li>
+				<li><span></span>Java3Android--ma...</li>
+			</ul>
+			<ul class="download">
+				<li>下载</li>
+				<li>下载</li>
+				<li>下载</li>
+				<li>下载</li>
+				<li>下载</li>
+				<li>下载</li>
+				<li>下载</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="button">
+		<img src="../test/portal36.gif">
+	</div>
 </body>
 </html>
