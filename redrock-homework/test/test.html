@@ -40,11 +40,14 @@
 		width: 30px;
 		font-size: 15px;
 		color: white;
+		position: relative;
+		float: left;
 		padding-left: 50px;
 		margin-top: -5px;
 	}
 	.titleSelect{
-		display: inline-block;
+		position: relative;
+		float: left;
 		width: 100px;
 		text-align: center;
 		font-size: 15px;
@@ -71,13 +74,13 @@
 		width: 100px;
 		padding-top: 15px;
 	}
-	.titleHidden dt dl{
+	.titleHidden dl{
 		padding-top: 8px;
 		padding-bottom: 8px;
 
 		border-bottom: 1px solid #949494;
 	}
-	.titleHidden dt dl:first-child{
+	.titleHidden dl:first-child{
 		border-top: 1px solid #949494;
 	}
 	.weather{
@@ -92,7 +95,6 @@
 		width: 1100px;
 		height: 40px;
 		margin: 0 auto;
-		/*background-color: blue;*/
 	}
 	.titleChoose div{
 		padding-top: 5px;
@@ -447,13 +449,16 @@
      	width: 97px;
      	top: 50px;
      }
-     #titleSelect1 div{
+     .titleSelect dt{
      	display: none;
      }
-     .titleSelect:hover div{
+     .titleSelect:hover{
+     	cursor: pointer;
+     }
+     .titleSelect:hover dt{
      	display: block !important;
      }
-     #titleSelect2:hover{
+     #titleSelect3:hover{
      	color: red;
      }
 
@@ -471,9 +476,12 @@
 	<li>...</li>
 </ul>
 <span class="hello">您好</span>
-<div class="titleSelect" id="titleSelect1">陈晋唯 <span></span><div class="titleHidden" ><dt><dl>个人资料</dl><dl>退出登录</dl></dt></div></div>
-<div class="titleSelect" id="titleSelect2">信息查询 <span></span><div class="titleHidden" ><dt><dl>查成绩</dl><dl>查课表</dl><dl>查空教室</dl></dt></div></div>
-<div class="titleSelect" id="titleSelect3">论坛 <span></span></span><div class="titleHidden" ><dt><dl>评论</dl><dl>@我</dl></dt></div></div>
+<ol>
+<li class="titleSelect" id="titleSelect1">陈晋唯 <span></span><dt class="titleHidden"><dl>个人资料</dl><dl>退出登录</dl></dt></li>
+<li class="titleSelect" id="titleSelect2">信息查询 <span></span><dt class="titleHidden"><dl>查成绩</dl><dl>查课表</dl><dl>查空教室</dl></dt></li>
+<li class="titleSelect" id="titleSelect3">论坛 <span></span></span><dt class="titleHidden"><dl>评论</dl><dl>@我</dl></dt></li>
+
+ </ol>
 <span class="hello">登出</span>
 </div>
 
